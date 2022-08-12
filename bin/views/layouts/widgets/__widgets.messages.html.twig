@@ -1,0 +1,10 @@
+{% macro alert_msg( reponse , alert ) %}
+    {% if reponse %}
+        <div class="alert {{ alert }}" role="alert" id="msgvalidation">
+            {{ reponse }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    {% endif %}
+{% endmacro %}

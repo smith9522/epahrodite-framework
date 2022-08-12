@@ -1,0 +1,22 @@
+{% extends layouts %}{% from charts import bar_chart %} {% block content %}
+<div class="container-fluid admin">
+    <h1>WELCOME - ADMINISTRATION</h1>
+    <hr>
+    <p>{{ messages.answers('site-title') }}</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 epaphrodite" align="center">
+                <div class="logo aos-init" data-aos="fade-right" data-aos-offset="300" align="center"><img src="{{ __img('logo.png') }}" class="img-fluid"></div>
+                <div class="text-framework aos-init" data-aos="fade-left" data-aos-offset="300">Framework</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 mb-6" align="center">
+        <canvas id="chart_test" style="width:100%;max-width:100%">tes</canvas>
+    </div>
+
+    {{ bar_chart( '"[test]' , "5" , "#05a158" , "chart_test" , "test label" ) }}
+
+</div>
+{% endblock %}
